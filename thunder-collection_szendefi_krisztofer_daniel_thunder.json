@@ -1,0 +1,56 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "szendefi_krisztofer_daniel_thunder",
+    "dateExported": "2024-05-21T15:59:04.808Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "17460650-2c4b-4406-879f-2605afc0e25e",
+            "colId": "8e49923a-6741-4abe-b30d-be01ca0a2652",
+            "containerId": "",
+            "name": "szavak",
+            "url": "szavak",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-21T14:28:34.803Z",
+            "modified": "2024-05-21T14:28:56.344Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2ae5e54c-c4ce-4f87-9498-779f9eab1e23",
+            "colId": "8e49923a-6741-4abe-b30d-be01ca0a2652",
+            "containerId": "",
+            "name": "tema",
+            "url": "tema",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-21T14:29:06.131Z",
+            "modified": "2024-05-21T14:29:10.658Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0e4bc072-3216-489a-a180-b5f75cc8f19a",
+            "colId": "8e49923a-6741-4abe-b30d-be01ca0a2652",
+            "containerId": "",
+            "name": "szavak/tema",
+            "url": "szavak/tema/ruha",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-05-21T14:29:30.251Z",
+            "modified": "2024-05-21T14:30:00.451Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:8000/api/"
+        }
+    }
+}

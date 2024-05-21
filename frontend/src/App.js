@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
+import DataService from './api/DataService';
+import Szavak from './components/Szavak';
+import { useState, useEffect } from "react";
+import Tablazat from './components/Tablazat';
 
 function App() {
+ const DS = new DataService();
+ const [temak, setTemak] = useState([]);
+ const [szavak, setSzavak] = useState([]);
+
+ console.log(szavak);
+
+    useEffect(() => {
+      DS.get("http://localhost:8000/api/tema", getTemak)
+      DS.get("http://localhost:8000/api/szavak", getSzavak)
+    },[])
+
+  function getTemak(data) {
+    setTemak(data.data);
+    console.log(temak);
+  };
+
+  function getSzavak(data) {
+    setSzavak(data.data);
+    
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Szavak</span>
+  </nav>
+    <Szavak temak = {temak} setSzavak = {setSzavak} getSzavak = {getSzavak}/>
+    <Tablazat szavak = {szavak}></Tablazat>
     </div>
   );
 }
